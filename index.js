@@ -11,18 +11,20 @@ const tutorials = [
   'what is JSONP?'
 ];
 
-console.log(tutorials);
+// console.log(tutorials);
 
+// create a function titleCased that takes no arguments and returns an array of tutorial titles with the first letter of every word capitalized.
 const titleCased = () => {
-  let newTutorials = tutorials.map((line) => {
-    let newLine = line.split(' ').map((word) => {
-      // console.log(word);
+  let newTutorials = tutorials.map((title) => {
+    // iterate over the titles
+    let newTitle = title.split(' ').map((word) => {
+      // split the title into an array of words
+      // iterate over the words
       let newWord = word[0].toUpperCase() + word.substring(1);
-      // console.log(newWord)
       return (newWord);
     });
-    // console.log(newLine);
-    return newLine.join(' ');
+    // join the array of words with a space between each word
+    return newTitle.join(' ');
   });
   return newTutorials;
 }
